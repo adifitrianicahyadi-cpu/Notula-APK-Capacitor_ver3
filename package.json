@@ -1,0 +1,23 @@
+{
+  "name": "notula-apk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Notula — aplikasi notulensi rapat (Capacitor Android, offline + rekam saat layar terkunci)",
+  "scripts": {
+    "sync": "cap sync android",
+    "add:android": "cap add android",
+    "patch:android": "node scripts/patch-android.mjs",
+    "open:android": "cap open android",
+    "build:apk": "cd android && ./gradlew assembleDebug",
+    "release:apk": "cd android && ./gradlew assembleRelease"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor-community/speech-recognition": "^6.0.0",
+    "capacitor-voice-recorder": "^6.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
+}
